@@ -1,0 +1,570 @@
+ssw@ubuntu:~$ date
+Tue May 12 03:10:47 PDT 2020
+
+ssw@ubuntu:~$ cat /etc/issue
+Ubuntu 18.04.3 LTS \n \l
+
+ssw@ubuntu:~$ uname -a
+Linux ubuntu 5.0.0-23-generic #24~18.04.1-Ubuntu SMP Mon Jul 29 16:12:28 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+
+ssw@ubuntu:~$ cat /proc/cpuinfo
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz
+stepping	: 9
+microcode	: 0x8e
+cpu MHz		: 2904.000
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon nopl xtopology tsc_reliable nonstop_tsc cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 avx2 smep bmi2 invpcid mpx rdseed adx smap clflushopt xsaveopt xsavec xsaves arat flush_l1d arch_capabilities
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds
+bogomips	: 5808.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 43 bits physical, 48 bits virtual
+power management:
+
+ssw@ubuntu:~$ cat /proc/meminfo
+MemTotal:        4012772 kB
+MemFree:         1168912 kB
+MemAvailable:    2628840 kB
+Buffers:           86960 kB
+Cached:          1526272 kB
+SwapCached:            0 kB
+Active:          1813356 kB
+Inactive:         695572 kB
+Active(anon):     897024 kB
+Inactive(anon):    19532 kB
+Active(file):     916332 kB
+Inactive(file):   676040 kB
+Unevictable:          16 kB
+Mlocked:              16 kB
+SwapTotal:        969960 kB
+SwapFree:         969960 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:        895768 kB
+Mapped:           261892 kB
+Shmem:             20864 kB
+KReclaimable:     145068 kB
+Slab:             203508 kB
+SReclaimable:     145068 kB
+SUnreclaim:        58440 kB
+KernelStack:       11964 kB
+PageTables:        42896 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     2976344 kB
+Committed_AS:    4765440 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+Percpu:            35840 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      145216 kB
+DirectMap2M:     4048896 kB
+DirectMap1G:     2097152 kB
+
+ssw@ubuntu:~$ uptime
+ 03:58:24 up  3:08,  1 user,  load average: 0.00, 0.00, 0.00
+
+ssw@ubuntu:~$ sudo fdisk -l
+[sudo] password for ssw: 
+Disk /dev/loop0: 54.4 MiB, 57069568 bytes, 111464 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop1: 4 MiB, 4218880 bytes, 8240 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop2: 42.8 MiB, 44879872 bytes, 87656 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop3: 1008 KiB, 1032192 bytes, 2016 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop4: 149.9 MiB, 157184000 bytes, 307000 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop5: 3.7 MiB, 3825664 bytes, 7472 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop6: 14.8 MiB, 15462400 bytes, 30200 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop7: 88.5 MiB, 92778496 bytes, 181208 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/sda: 20 GiB, 21474836480 bytes, 41943040 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xa3072ab4
+
+Device     Boot Start      End  Sectors Size Id Type
+/dev/sda1  *     2048 41940991 41938944  20G 83 Linux
+
+ssw@ubuntu:~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            1.9G     0  1.9G   0% /dev
+tmpfs           392M  2.0M  390M   1% /run
+/dev/sda1        20G  5.9G   13G  32% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           2.0G     0  2.0G   0% /sys/fs/cgroup
+/dev/loop0       55M   55M     0 100% /snap/core18/1066
+/dev/loop1      4.2M  4.2M     0 100% /snap/gnome-calculator/406
+/dev/loop2       43M   43M     0 100% /snap/gtk-common-themes/1313
+/dev/loop3      1.0M  1.0M     0 100% /snap/gnome-logs/61
+/dev/loop4      150M  150M     0 100% /snap/gnome-3-28-1804/67
+/dev/loop5      3.8M  3.8M     0 100% /snap/gnome-system-monitor/100
+/dev/loop6       15M   15M     0 100% /snap/gnome-characters/296
+/dev/loop7       89M   89M     0 100% /snap/core/7270
+tmpfs           392M   16K  392M   1% /run/user/121
+tmpfs           392M   44K  392M   1% /run/user/1000
+
+ssw@ubuntu:~$ dpkg --get-selections | more
+accountsservice					install
+acl						install
+acpi-support					install
+acpid						install
+adduser						install
+adium-theme-ubuntu				install
+adwaita-icon-theme				install
+aisleriot					install
+alsa-base					install
+alsa-utils					install
+amd64-microcode					install
+anacron						install
+apg						install
+app-install-data-partner			install
+apparmor					install
+apport						install
+apport-gtk					install
+apport-symptoms					install
+appstream					install
+apt						install
+apt-config-icons				install
+apt-utils					install
+aptdaemon					install
+aptdaemon-data					install
+apturl						install
+apturl-common					install
+aspell						install
+aspell-en					install
+at-spi2-core					install
+avahi-autoipd					install
+avahi-daemon					install
+avahi-utils					install
+baobab						install
+base-files					install
+base-passwd					install
+bash						install
+bash-completion					install
+bc						install
+bind9-host					install
+binutils					install
+binutils-common:amd64				install
+binutils-x86-64-linux-gnu			install
+bluez						install
+bluez-cups					install
+bluez-obexd					install
+bolt						install
+branding-ubuntu					install
+brltty						install
+bsdmainutils					install
+bsdutils					install
+--More--
+
+ssw@ubuntu:~$ service --status-all
+ [ + ]  acpid
+ [ + ]  alsa-utils
+ [ - ]  anacron
+ [ + ]  apparmor
+ [ + ]  apport
+ [ + ]  avahi-daemon
+ [ + ]  bluetooth
+ [ - ]  console-setup.sh
+ [ + ]  cron
+ [ + ]  cups
+ [ + ]  cups-browsed
+ [ + ]  dbus
+ [ - ]  dns-clean
+ [ + ]  gdm3
+ [ + ]  grub-common
+ [ - ]  hwclock.sh
+ [ - ]  irqbalance
+ [ + ]  kerneloops
+ [ - ]  keyboard-setup.sh
+ [ + ]  kmod
+ [ + ]  network-manager
+ [ + ]  networking
+ [ - ]  plymouth
+ [ - ]  plymouth-log
+ [ - ]  pppd-dns
+ [ + ]  procps
+ [ - ]  rsync
+ [ + ]  rsyslog
+ [ - ]  saned
+ [ + ]  speech-dispatcher
+ [ - ]  spice-vdagent
+ [ + ]  udev
+ [ + ]  ufw
+ [ + ]  unattended-upgrades
+ [ - ]  uuidd
+ [ + ]  vmware-tools
+ [ + ]  whoopsie
+ [ - ]  x11-common
+
+ssw@ubuntu:~$ lsmod
+Module                  Size  Used by
+isofs                  49152  0
+rfcomm                 77824  4
+bnep                   24576  2
+crct10dif_pclmul       16384  1
+crc32_pclmul           16384  0
+ghash_clmulni_intel    16384  0
+aesni_intel           372736  0
+aes_x86_64             20480  1 aesni_intel
+crypto_simd            16384  1 aesni_intel
+vmw_balloon            24576  0
+cryptd                 24576  3 crypto_simd,ghash_clmulni_intel,aesni_intel
+glue_helper            16384  1 aesni_intel
+intel_rapl_perf        16384  0
+input_leds             16384  0
+joydev                 28672  0
+serio_raw              20480  0
+snd_ens1371            28672  4
+snd_ac97_codec        135168  1 snd_ens1371
+vmw_vsock_vmci_transport    32768  2
+vsock                  36864  3 vmw_vsock_vmci_transport
+gameport               20480  1 snd_ens1371
+ac97_bus               16384  1 snd_ac97_codec
+snd_pcm               102400  2 snd_ac97_codec,snd_ens1371
+snd_seq_midi           20480  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+snd_rawmidi            36864  2 snd_seq_midi,snd_ens1371
+vmwgfx                290816  4
+btusb                  49152  0
+snd_seq                69632  2 snd_seq_midi,snd_seq_midi_event
+btrtl                  20480  1 btusb
+btbcm                  16384  1 btusb
+btintel                24576  1 btusb
+ttm                   102400  1 vmwgfx
+snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
+snd_timer              36864  2 snd_seq,snd_pcm
+drm_kms_helper        180224  1 vmwgfx
+bluetooth             557056  31 btrtl,btintel,btbcm,bnep,btusb,rfcomm
+snd                    86016  15 snd_seq,snd_seq_device,snd_timer,snd_ac97_codec,snd_pcm,snd_rawmidi,snd_ens1371
+ecdh_generic           28672  1 bluetooth
+drm                   479232  7 vmwgfx,drm_kms_helper,ttm
+soundcore              16384  1 snd
+fb_sys_fops            16384  1 drm_kms_helper
+syscopyarea            16384  1 drm_kms_helper
+vmw_vmci               69632  2 vmw_balloon,vmw_vsock_vmci_transport
+sysfillrect            16384  1 drm_kms_helper
+sysimgblt              16384  1 drm_kms_helper
+mac_hid                16384  0
+sch_fq_codel           20480  2
+parport_pc             36864  0
+ppdev                  24576  0
+lp                     20480  0
+parport                53248  3 parport_pc,lp,ppdev
+ip_tables              32768  0
+x_tables               40960  1 ip_tables
+autofs4                45056  2
+hid_generic            16384  0
+psmouse               151552  0
+mptspi                 24576  1
+ahci                   40960  0
+libahci                32768  1 ahci
+e1000                 139264  0
+mptscsih               36864  1 mptspi
+mptbase                94208  2 mptspi,mptscsih
+scsi_transport_spi     32768  1 mptspi
+i2c_piix4              28672  0
+pata_acpi              16384  0
+usbhid                 53248  0
+hid                   126976  2 usbhid,hid_generic
+
+ssw@ubuntu:~$ crontab -l
+no crontab for ssw
+
+ssw@ubuntu:~$ cat /etc/cron*
+cat: /etc/cron.d: Is a directory
+cat: /etc/cron.daily: Is a directory
+cat: /etc/cron.hourly: Is a directory
+cat: /etc/cron.monthly: Is a directory
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# m h dom mon dow user	command
+17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
+25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+#
+cat: /etc/cron.weekly: Is a directory
+
+ssw@ubuntu:~$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd/netif:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd/resolve:/usr/sbin/nologin
+syslog:x:102:106::/home/syslog:/usr/sbin/nologin
+messagebus:x:103:107::/nonexistent:/usr/sbin/nologin
+_apt:x:104:65534::/nonexistent:/usr/sbin/nologin
+uuidd:x:105:111::/run/uuidd:/usr/sbin/nologin
+avahi-autoipd:x:106:112:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/usr/sbin/nologin
+usbmux:x:107:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+dnsmasq:x:108:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+rtkit:x:109:114:RealtimeKit,,,:/proc:/usr/sbin/nologin
+cups-pk-helper:x:110:116:user for cups-pk-helper service,,,:/home/cups-pk-helper:/usr/sbin/nologin
+speech-dispatcher:x:111:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/bin/false
+whoopsie:x:112:117::/nonexistent:/bin/false
+kernoops:x:113:65534:Kernel Oops Tracking Daemon,,,:/:/usr/sbin/nologin
+saned:x:114:119::/var/lib/saned:/usr/sbin/nologin
+pulse:x:115:120:PulseAudio daemon,,,:/var/run/pulse:/usr/sbin/nologin
+avahi:x:116:122:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/usr/sbin/nologin
+colord:x:117:123:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+hplip:x:118:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+geoclue:x:119:124::/var/lib/geoclue:/usr/sbin/nologin
+gnome-initial-setup:x:120:65534::/run/gnome-initial-setup/:/bin/false
+gdm:x:121:125:Gnome Display Manager:/var/lib/gdm3:/bin/false
+ssw:x:1000:1000:LancetUbuntu,,,:/home/ssw:/bin/bash
+
+ssw@ubuntu:~$ sudo cat /etc/shadow
+root:!:18320:0:99999:7:::
+daemon:*:18113:0:99999:7:::
+bin:*:18113:0:99999:7:::
+sys:*:18113:0:99999:7:::
+sync:*:18113:0:99999:7:::
+games:*:18113:0:99999:7:::
+man:*:18113:0:99999:7:::
+lp:*:18113:0:99999:7:::
+mail:*:18113:0:99999:7:::
+news:*:18113:0:99999:7:::
+uucp:*:18113:0:99999:7:::
+proxy:*:18113:0:99999:7:::
+www-data:*:18113:0:99999:7:::
+backup:*:18113:0:99999:7:::
+list:*:18113:0:99999:7:::
+irc:*:18113:0:99999:7:::
+gnats:*:18113:0:99999:7:::
+nobody:*:18113:0:99999:7:::
+systemd-network:*:18113:0:99999:7:::
+systemd-resolve:*:18113:0:99999:7:::
+syslog:*:18113:0:99999:7:::
+messagebus:*:18113:0:99999:7:::
+_apt:*:18113:0:99999:7:::
+uuidd:*:18113:0:99999:7:::
+avahi-autoipd:*:18113:0:99999:7:::
+usbmux:*:18113:0:99999:7:::
+dnsmasq:*:18113:0:99999:7:::
+rtkit:*:18113:0:99999:7:::
+cups-pk-helper:*:18113:0:99999:7:::
+speech-dispatcher:!:18113:0:99999:7:::
+whoopsie:*:18113:0:99999:7:::
+kernoops:*:18113:0:99999:7:::
+saned:*:18113:0:99999:7:::
+pulse:*:18113:0:99999:7:::
+avahi:*:18113:0:99999:7:::
+colord:*:18113:0:99999:7:::
+hplip:*:18113:0:99999:7:::
+geoclue:*:18113:0:99999:7:::
+gnome-initial-setup:*:18113:0:99999:7:::
+gdm:*:18113:0:99999:7:::
+ssw:$1$i6CTaKT2$2gUm2DeuD8o4ThhM4jV3Q.:18320:0:99999:7:::
+
+ssw@ubuntu:~$ ifconfig -a
+ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.153.128  netmask 255.255.255.0  broadcast 192.168.153.255
+        inet6 fe80::e493:4b42:deac:9f79  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:90:3f:41  txqueuelen 1000  (Ethernet)
+        RX packets 18918  bytes 18820554 (18.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4219  bytes 328488 (328.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 5700  bytes 440507 (440.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 5700  bytes 440507 (440.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ssw@ubuntu:~$ netstat -rn
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+0.0.0.0         192.168.153.2   0.0.0.0         UG        0 0          0 ens33
+169.254.0.0     0.0.0.0         255.255.0.0     U         0 0          0 ens33
+192.168.153.0   0.0.0.0         255.255.255.0   U         0 0          0 ens33
+
+ssw@ubuntu:~$ arp -a
+promote.cache-dns.local (192.168.153.254) at 00:50:56:e3:12:d8 [ether] on ens33
+promote.cache-dns.local (192.168.153.2) at 00:50:56:e7:fb:57 [ether] on ens33
+
+ssw@ubuntu:~$ netstat -anp | more
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+ PID/Program name    
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN     
+ -                   
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN     
+ -                   
+tcp6       0      0 ::1:631                 :::*                    LISTEN     
+ -                   
+udp        0      0 0.0.0.0:631             0.0.0.0:*                          
+ -                   
+udp        0      0 0.0.0.0:5353            0.0.0.0:*                          
+ -                   
+udp        0      0 127.0.0.53:53           0.0.0.0:*                          
+ -                   
+udp        0      0 0.0.0.0:68              0.0.0.0:*                          
+ -                   
+udp        0      0 0.0.0.0:45186           0.0.0.0:*                          
+ -                   
+udp6       0      0 :::5353                 :::*                               
+ -                   
+udp6       0      0 :::32774                :::*                               
+ -                   
+raw6       0      0 :::58                   :::*                    7          
+ -                   
+Active UNIX domain sockets (servers and established)
+Proto RefCnt Flags       Type       State         I-Node   PID/Program name    
+--More--
+
+ssw@ubuntu:~$ lsof | more
+lsof: WARNING: can't stat() fuse.gvfsd-fuse file system /run/user/121/gvfs
+      Output information may be incomplete.
+COMMAND    PID  TID             USER   FD      TYPE             DEVICE SIZE/OFF
+       NODE NAME
+systemd      1                  root  cwd   unknown                            
+            /proc/1/cwd (readlink: Permission denied)
+systemd      1                  root  rtd   unknown                            
+            /proc/1/root (readlink: Permission denied)
+systemd      1                  root  txt   unknown                            
+            /proc/1/exe (readlink: Permission denied)
+systemd      1                  root NOFD                                      
+            /proc/1/fd (opendir: Permission denied)
+kthreadd     2                  root  cwd   unknown                            
+            /proc/2/cwd (readlink: Permission denied)
+kthreadd     2                  root  rtd   unknown                            
+            /proc/2/root (readlink: Permission denied)
+kthreadd     2                  root  txt   unknown                            
+            /proc/2/exe (readlink: Permission denied)
+kthreadd     2                  root NOFD                                      
+            /proc/2/fd (opendir: Permission denied)
+rcu_gp       3                  root  cwd   unknown                            
+            /proc/3/cwd (readlink: Permission denied)
+rcu_gp       3                  root  rtd   unknown                            
+            /proc/3/root (readlink: Permission denied)
+rcu_gp       3                  root  txt   unknown                            
+            /proc/3/exe (readlink: Permission denied)
+rcu_gp       3                  root NOFD                                      
+            /proc/3/fd (opendir: Permission denied)
+rcu_par_g    4                  root  cwd   unknown                            
+--More--
+
+ssw@ubuntu:~$ ps auxwwem | more
+USER        PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root          1  0.0  0.2 160096  9372 ?        -    00:49   0:04 /sbin/init au
+to noprompt
+root          -  0.0    -      -     - -        Ss   00:49   0:04 -
+root          2  0.0  0.0      0     0 ?        -    00:49   0:00 [kthreadd]
+root          -  0.0    -      -     - -        S    00:49   0:00 -
+root          3  0.0  0.0      0     0 ?        -    00:49   0:00 [rcu_gp]
+root          -  0.0    -      -     - -        I<   00:49   0:00 -
+root          4  0.0  0.0      0     0 ?        -    00:49   0:00 [rcu_par_gp]
+root          -  0.0    -      -     - -        I<   00:49   0:00 -
+root          6  0.0  0.0      0     0 ?        -    00:49   0:00 [kworker/0:0H
+-kb]
+root          -  0.0    -      -     - -        I<   00:49   0:00 -
+root          8  0.0  0.0      0     0 ?        -    00:49   0:00 [mm_percpu_wq
+]
+root          -  0.0    -      -     - -        I<   00:49   0:00 -
+root          9  0.0  0.0      0     0 ?        -    00:49   0:00 [ksoftirqd/0]
+root          -  0.0    -      -     - -        S    00:49   0:00 -
+root         10  0.0  0.0      0     0 ?        -    00:49   0:01 [rcu_sched]
+root          -  0.0    -      -     - -        I    00:49   0:01 -
+root         11  0.0  0.0      0     0 ?        -    00:49   0:00 [migration/0]
+root          -  0.0    -      -     - -        S    00:49   0:00 -
+root         12  0.0  0.0      0     0 ?        -    00:49   0:00 [idle_inject/
+0]
+root          -  0.0    -      -     - -        S    00:49   0:00 -
+root         13  0.0  0.0      0     0 ?        -    00:49   0:06 [kworker/0:1-
+eve]
+--More--
